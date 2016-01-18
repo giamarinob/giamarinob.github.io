@@ -12,16 +12,50 @@
   <h3>Jan 18 2016</h3>
 
   <section>
+    <h4>Classes vs ID's</h4>
     <p>
-      
+       The topic of discussion today is classes and id's. What are they, what are
+       some of the differences between them, and some of the best practices associated with
+       both of them. 
     </p>
     <p>
-        
+        Classes and Id's are what's known as selectors. Selectors are are used
+        in CSS to find elements based on certain values. In this case the selector
+        would find html elements with the assigned class or id value. Once it finds
+        a particular element with that certain class or id assignment it performs
+        an operation on that element. In this case it styles that element based
+        on whatever styling commands are associated with that class or id. 
     </p>
     <p>
-        
+        In syntax classes and id's look very similar. They assigned in html code 
+        almost the same way. "Element class/id="name"s. The only difference
+        between the two that one may see is word class or id. That doesn't, on its face, seem all
+        that significant. Let's look at how they are defined in CSS. In a styling page
+        an id selector is defined using '#' before the id name. The class selector is
+        defined using a '.'. So an id would look like `#id-name` and a class would look
+        like `.class-name`. Again, on it's face it doesn't seem all that significant. At
+        a glance it looks like the two are almost interchangeable. The significant difference
+        between the two is in usage. 
     </p>
-
-      <!-- copy and paste as many sections as you want to add paragraphs -->
+    <p>
+      The usage of class is almost limitless while the usage of id is extremely
+      specific. The class selector can be used as many times as you want throughout
+      an html document. An id can only be used once in an entire html document. Newer
+      browser, in my case Chrome, will still render the page the way you intended it too. You
+      will not, however, be able to validate your html code with multiple instances of the same id selector.
+      Another big difference is an individual element can only have one id assignment whereas
+      it can have as many class assignments as you wish to give it. The final large difference
+      is the precedence that is given to each. An id will override an already existing class assigment.
+      If you have a block of html code that's being styled by a class selector an assignment
+      of id will override the specific styling of the element that the id is directed at.
+    </p>
+    <p>
+      Basically you'll want to remember that if you plan on using a given selector
+      in more than one place, even if you think you might, go with the class selector
+      over the id. The id is used in very specific cases. You can only assign an id selector
+      to one element and each element can have, at most, one id selector assigned to it. You can
+      run wild with the class selector. You can use the class selector over and over again
+      and you can assign multiple classes to each element. 
+    </p>
   </section>
 </main>
