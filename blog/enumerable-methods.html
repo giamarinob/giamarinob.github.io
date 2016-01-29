@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog Series</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+</head>
+
+<main>
+  <h1>Week 5</h1>
+  <h2>5.9 Technical Blog</h2>
+  <h3>Feb 01 2016</h3>
+
+  <section>
+    <h4>Enumberable Method Cycle</h4>
+    <p>
+       The topic of discussion for this week is a short discussion on the Ruby
+       enumerable, cycle. 
+    </p>
+    <p>
+        Enumberables are methods that can act on collections. In order for a class to
+        be able to access enumerable methods the class must have a .each method 
+        defined for that class. Arrays and hashes are two classes in ruby that come 
+        to mind when thinking of the .each method. The .each method is a common way
+        we go about iterating through those particular collections. Since those two
+        classes have a .each method defined within them they have access to the various
+        enumerable methods that are available in Ruby. 
+    </p>
+    <p>
+        You can add enumberables to your own created classes as well, thy don't have
+        to be pre-defined Ruby classes. It might look something like this;
+        <pre><code>
+          class My_Class
+            include Enumerable
+          end
+        </code></pre>
+        
+    </p>
+    <p>
+      The enumerable method we will discuss today is the #cycle method. The cycle method
+      works on arrays and hashes. The cycle array will pass each item into the block
+      of code provided and do some operation to that item. It's similar, in that respect,
+      to the .each method. Where #cycle differs is that when it get to the end of the array
+      or to the end of the hash it will "cycle" back to the first index or key/value pair.
+      It will continue to do this forever if it isn't given a break condition. 
+    </p>
+    <p>
+      A cycle that that goes on forever might look like this;
+      <pre><code>
+        #This will print the hearts cards over and over
+        deck_of_hearts.cycle { |card| puts card}
+        =>Two of Hearts
+        Three of Hearts
+        Four of Hearts
+        ...
+        Ace of Hearts
+        Two of Hearts
+        ...
+        And so on and so forth.
+      </code></pre>
+    <p>
+      There are a couple of different ways to stop this. The first is to simply 
+      tell the method #cycle how many times to cycle.
+      <pre><code>
+        #This will cycle the array twice
+        count_to_two.cycle(2) { |num| puts num}
+        =>1
+        2
+        1
+        2
+        =>nil
+      </code>
+      </pre>
+    </p>
+    <p>
+      You can also do it by using the "do" loop syntax and specifying where the loop
+      should break.
+      <pre><code>
+        #This cycle will break at a specific point
+        alphabet.cycle do |al|
+          puts al
+          break if al == E
+        end
+        =>A
+        B
+        C
+        D
+        E
+        =>nil
+      </code></pre>
+    </p>
+    <p>
+      That's about it for the cycle enumerable. I hope this shows you a little of 
+      what the #cycle method can do for you and why some classes have access to these
+      and some do not. 
+    </p>
+  </section>
+</main>
