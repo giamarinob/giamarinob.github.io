@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog Series</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+</head>
+
+<main>
+  <h1>Week 6</h1>
+  <h2>6.9 Technical Blog</h2>
+  <h3>Feb 08 2016</h3>
+
+  <section>
+    <h4>Ruby Classes</h4>
+    <p>
+       The topic of discussion today is to compare hashes and arrays. What are they, what are
+       some of the differences between them, and some of the situations where you would
+       choose one over the other. 
+    </p>
+    <p>
+        Arrays and hashes can become easy to mix up because they do have some similar
+        features. Like arrays, hashes can be created with empty values. Hashes are very
+        similar in function as well. Hashes are basically arrays except that index keys
+        are not limited to integers. Where a value in an array is tied to a specific 
+        integer key, which is referred to as an index, the key in a hash can be other objects
+        including integers. 
+    </p>
+    <p>
+        The key difference between arrays and hashes is that the keys can be objects
+        other than integers. Looking at an example is the best way to describe when 
+        to use one or the other. A simple example would be an inventory at a store. If the
+        store simply wanted to know what items were in its inventory then they could keep the
+        items stored in an array. They could go to that array and search the list for an item
+        or they could go through it and see what items were currently in the inventory etc.
+        If, however, the store wanted to have other information assoctiated with the items in
+        the inventory it may be better to use a hash. Let's say the store wanted to include 
+        the amount of each item with the item itself. Could they still use an array? Well, yes they
+        could. They could use a multi-dimensional array where each individual array was an item
+        name and how many they had. You can see how this can quickly get out of hand. You could
+        very quickly end up with multi-dimensional arrays that can exponentially grow in size
+        and complexity. It may be more prudent to use a hash in that instance. The key itself could
+        be the item and that key can point to a value which could be the number of items, or it could
+        the bar code associated with the items
+    </p>
+    <p>
+      Make no mistake hashes can also grow in complexity extremely quickly. You could have
+      a hash of hashes. Or you could have a hash of arrays of hashes. The list goes on and on.
+      Returning to the previous example, say you wanted to include both the number of items
+      the item name associated with any given bar code of a product in the store. You can do that
+      with a hash. You could use the barcode as a key, and that key would have a value that
+      was an array that included the item name and how many were in inventory. 
+      <pre>
+        <code>
+          inventory = {
+            17272: [iPhone 6, 30]
+            18272: [Samsung Galaxy 4, 30]
+            18723: [iMac, 10]
+          }
+        </code>
+      </pre>
+      If you wanted to do that in an array it might look something like this;
+      <pre>
+        <code>
+          inventory = [[17272, [iPhone 6, 30]], [18272, [Samsung Galaxy 4, 30]], [18723, [iMac, 10]]]
+        </code>
+      </pre>
+      You can see how the hash code itself is more compact and, in my opinion, a little cleaner
+      and easier to read. This is just one example of when it may be appropriate to
+      use an array over a hash. You can do a lot of the same things with hashes that you
+      can do with arrays and in the end it may come down to what you are more comfortable using. Being
+      well versed in both, however, will allow you to be more versatile with your code.
+    </p>
+    <p>
+      I hope that you learned a little about the difference between hashes and arrays. It can
+      be difficult to choose which one to use sometimes because they are similar not only in style, 
+      but their application. 
+    </p>
+  </section>
+</main>
