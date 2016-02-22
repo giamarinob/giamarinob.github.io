@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog Series</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+</head>
+
+<main>
+  <h1>Week 8</h1>
+  <h2>Cheat Sheet</h2>
+
+  <section>
+    <h4>CSS Positioning</h4>
+    <p>
+      This is something I really struggled with at first when I first encountered it way back in week 3.
+      This is a little cheat sheet is made up from explanations that I found extremely helpful in explaining
+      these concepts. There are four types of positioning in CSS. Static, relative, absolute, and fixed
+    </p>
+    <p>
+      The  static positioning is the first positioning option. This is the default positioning 
+      of all html elements. An element that has the static positioning attribute will be placed
+      W.R.T. the normal flow of the page. An element that has the styling attribute of static
+      does not respond to directional properties like top, bottom, left, or right.
+    </p>
+    <p>
+      Relative is the next styling attribute for position. The styling is called relative because
+      the element that has this positioning will be placed relative to the normal position of the
+      element if it was static. Relatively positioned elements will respond to directional properties
+      such as top, bottom, left, right. What's more is that other elements will not move to fill any gaps 
+      left by moving the relative positioned element. The other elements on the page will behave
+      as though the relative positioned element was still in its static position. 
+    </p>
+    <p>
+      The third positioning style is absolute. An absolutely positioned element is still positioned
+      relatively. However, the positioning is relative to the first parent element that is not positioned
+      statically. It must be noted that this must be a parent element. It cannot be a sibling element. The
+      relative positioning will go up the ladder through parents, grandparents, etc, until it finds the first element
+      that isn't a statically positioned element. Failing to do so will result in the element acting as though
+      it were relatively poditioned. This sytle of positioning also responds to directional properties such as
+      top, bottom, left, and right. 
+    </p>
+    <p>
+      The final positioning style is the fixed positioning style. An element with this style is positioned
+      relative to the viewport itself. This will result in the element not moving when the rest of the page is
+      scrolled. It will stay in the exact same spot on the screen. This property also responds to the directional
+      properties of top, bottom, left, and right. 
+    </p>
+  </section>
+</main>
