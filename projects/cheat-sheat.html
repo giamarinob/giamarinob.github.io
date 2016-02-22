@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <title>DBC Technical Blog Series</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+  <link type="text/css" rel="stylesheet" href="../stylesheets/blog.css" />
+</head>
+
+<main>
+  <h1>Week 8</h1>
+  <h2>Cheat Sheet</h2>
+
+  <section>
+    <h4>Static Vs Dynamically Typed Languages</h4>
+    <p>
+      The topic of discussion today is a comparison of statically and dynamically typed languages.
+       What do each of these things mean, and what's the difference? Is one better than the other?
+       We aim to find these answers as we pursue these questions. 
+    </p>
+    <p>
+      To start off it would be incumbent to discuss exactly what is meant by a static type or
+      dynamic type language. We will start with static typed language. 
+    </p>
+    <p>
+      A static typed language is a type of programming language that implements a method
+      of indicating the type safety of a written program based on the text of that program. 
+      That's generallly just a fancy way of referring to a compiler. Before a program or block
+      of code is run, the text of the code is complied which checks the syntax and makes sure
+      there aren't errors. One of the thing a compiler looks for is what's referred to as the 
+      type safety of the code. This means the program will check for type errors. Type errors are
+      errors that are caused by problems with constants, variables, or methods and functions. This
+      will look for things like trying to add a boolean to an integer. Things of that nature. You can't 
+      declare a variable and assign it an int then assign that same variable with a boolean. Now this isn't
+      an end all be all rule because there are other things that effect the rules like weak typed vs strong
+      typed etc, but that's for another discussion. Most importantly a statically typed language will
+      check for these things when it compiles the code. This is opposed to dynamically which checks for
+      errors at runtime.
+    </p>
+    <p>
+      Dynamically typed language is a term used to desrcibe a language that checks for type safety at
+      runtime. This means you can type code that doesn't make a whole lot of sense that is syntactically
+      accurate. You can run this code and you won't get an error until the code is run. You can concivably
+      run a program with code like this;
+      <pre><code>
+        if true
+          return true
+        else
+          return true * 24 / "string"
+        end
+      </code></pre>
+      This is something that might not ever give an error. This is because the block of code that makes 
+      no sense may never actually run. In the example above since the first part will always evaluate
+      to true the else will never be run, and, consequnetly, may never cause a problem. The problem comes
+      when you have a situation that may almost never be evaluated. Eventually it will be evaluated and it
+      may be only then that it is realized a program has a problem. This can make debugging much more difficult
+      because you have to make sure you run every bit of code to ensure that everything tests out. 
+    </p>
+    <p>
+      Is one better than the other? That is a topic that is hottly contested in the programming world. 
+      There is no concensus which is better, and perhaps the truth lies somewhere in the middle. Some languages
+      are implenting both static and dynamic type checking. These are often referred to as soft typed languages. 
+    </p>
+    <p>
+      Static typing will find errors at the time of compiling. This can improve reliability by being
+      appropriately checked regardless if the code will ever run. Dynamically typed languages can allow
+      for faster runtime code because of the dynamic loading of new code. There are a lot of arguments on 
+      what's actually better. I hope this sheds some light on what is meant by these terms.
+    </p>
+  </section>
+</main>
