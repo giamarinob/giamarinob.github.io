@@ -26,7 +26,6 @@ li {
 	background-color: #3c4543;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
-	height: 100px;
 }
 
 header img {
@@ -51,9 +50,6 @@ div li {
   margin-left: 15px;
 }
 
-div {
-  display:inline-block;
-}
 
 body a:hover {
   color: red;
