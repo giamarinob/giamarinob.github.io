@@ -138,9 +138,11 @@ body {
 
 table {
   text-align: center;
+  margin: auto;
+  width: 75%;
 }
 
-td a {
-  padding-bottom: -5px;
+td {
+  border-color: red;
 }
   
