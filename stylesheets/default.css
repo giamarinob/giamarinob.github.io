@@ -144,5 +144,10 @@ table {
 
 td {
   border-color: red;
+  border-width: 5px;
+}
+
+td p {
+  margin-top: -1px;
 }
   
