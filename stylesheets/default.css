@@ -135,3 +135,12 @@ body {
   margin-top: 35px;
   margin-top: -70px;
 }
+
+table {
+  text-align: center;
+}
+
+td a {
+  padding-bottom: -5px;
+}
+  
