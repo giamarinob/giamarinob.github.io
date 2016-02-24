@@ -94,7 +94,7 @@ a:visted {
 
 
 footer {
-  position: relative;
+  position: fixed;
   width: 100%;
   bottom: 0;
   height: 100px;
@@ -106,7 +106,6 @@ footer {
 footer ul {
   position: relative;
   margin: auto;
-  margin-top: 30px;
   padding-top: 30px;
 }
 
@@ -124,7 +123,7 @@ p {
 
 body {
   background-color: black;
-  
+  margin-bottom: 110px;
 }
 
 .center {
