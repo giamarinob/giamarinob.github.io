@@ -23,10 +23,9 @@ li {
 
 .header {
   position: relative;
-	background-color: #3c4543;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+	background-color: #00CCCC;
 	height: 100px;
+	margin-left: -8px;
 }
 
 header img {
@@ -102,7 +101,7 @@ footer {
   bottom: 0;
   height: 100px;
   text-align: center;
-  background-color: gray;
+  background-color: #00CCCC;
   margin-left: -8px;
 }
 
@@ -120,18 +119,18 @@ footer ul {
 
 p {
   margin-top: 5%;
-  color: yellow;
+  color: gray;
   text-align: center;
 }
 
 body {
-  background-color: black;
+  background-color: white;
   margin-bottom: 110px;
 }
 
 .center {
   text-align: center;
-  color: white;
+  color: gray;
   margin-top: 35px;
   margin-top: -70px;
 }
@@ -143,11 +142,17 @@ table {
 }
 
 td {
-  border-color: red;
-  border-width: 5px;
+  border: 2px solid red;
 }
 
 td p {
   margin-top: -1px;
+  color: #606060;
+}
+
+th {
+  font-size: 30px;
+  color: blue;
+  border: 2px solid blue;
 }
   
